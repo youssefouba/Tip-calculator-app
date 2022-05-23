@@ -1,38 +1,273 @@
-.App {
+/* @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;700&display=swap'); */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Space Mono", sans-serif;
+  font-weight: 700;
+}
+
+body {
+  background-color: #c5e4e7;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.bille {
+  margin-top: 15vh;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.title {
+  color: #305657;
+  font-size: 18px;
+  padding-bottom: 20px;
+  letter-spacing: 15px;
+  font-weight: 700;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.content {
+  width: 80%;
+  margin: auto;
+  background-color: white;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding-bottom: 15px;
+  border-radius: 20px;
+}
+
+.infos {
+  text-align: left;
+  margin: 25px;
+
+}
+
+.inputBox {
   display: flex;
-  flex-direction: column;
+  align-items: center;
+  margin-top: 8px;
+
+
+
+}
+
+.label {
+  color: hsl(186, 14%, 43%);
+}
+
+.inputBox img {
+  position: absolute;
+  padding-left: 20px;
+
+}
+
+.main-input {
+  border: transparent;
+  text-align: right;
+  outline: none;
+  background: #F3F8FB;
+  font-size: 19px;
+  color: hsl(183, 100%, 15%);
+  padding: 5px 20px;
+  border-radius: 5px;
+  width: 100%;
+
+}
+
+.main-input:focus,
+.custip:focus {
+  border: hsl(172, 67%, 45%) solid 2px;
+  padding: 3px 18px;
+}
+
+.errorText {
+  text-align: right;
+  color: #B57F6F;
+  float: right;
+  font-size: 16px;
+}
+
+.tip {
+  padding: 10px 30px;
+}
+
+.SelectTip {
+  text-align: left;
+  margin: 25px;
+}
+
+.Tips {
+  margin-top: 10px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 10px;
+}
+
+.tip {
+  border: transparent;
+  background-color: hsl(183, 100%, 15%);
+  color: white;
+  padding: 10px 35px;
+  font-size: 20px;
+  border-radius: 8px;
+  /* margin:5px 8px; */
+  cursor: pointer;
+  width: 100%;
+}
+
+.tip:hover {
+  background-color: hsl(186, 14%, 43%);
+}
+
+.custom {
+  width: auto;
+  padding: 10px 20px;
+}
+
+.Lastclick {
+  background-color: hsl(172, 67%, 45%);
+  color: hsl(183, 100%, 15%);
+}
+
+.custip {
+  padding: 10px 20px;
+  font-size: 20px;
+  background-color: #F3F8FB;
+  color: hsl(184, 14%, 56%);
+  outline: none;
+  text-align: right;
+}
+
+.custip:hover {
+  background-color: #F3F8FB;
+}
+
+.custip::placeholder {
+  text-align: center;
+}
+
+.disNo {
+  display: none;
+}
+
+.NotValid {
+  border: #B57F6F solid 2px;
+  padding: 3px 18px;
+}
+
+*::placeholder {
+  color: hsl(184, 14%, 56%);
+}
+
+/*---------- Results------ */
+.Result {
+  margin: 30px 25px 15px 25px;
+  padding: 35px;
+  background-color: hsl(183, 100%, 15%);
+  border-radius: 20px;
+}
+
+.Amount {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  text-align: left;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  margin-bottom: 25px;
+
 }
 
-.App-link {
-  color: #61dafb;
+.Amont {
+  font-size: 35px;
+  color: hsl(172, 67%, 45%);
+  text-align: right;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.AmontName {
+  color: hsl(189, 41%, 97%);
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.units {
+  font-size: 13px;
+  color: hsl(186, 14%, 43%);
+}
+
+.btn {
+  background-color: hsl(172, 67%, 45%);
+  color: hsl(183, 100%, 15%);
+  width: 100%;
+  padding: 9px;
+  font-size: 18px;
+  border: none;
+  border-radius: 5px;
+}
+
+.btn:hover {
+  background-color: #9FE8DF;
+
+}
+
+.divBtn {
+  margin-top: 40%;
+}
+
+
+@media (min-width:1300px) {
+  .bille {
+    margin-top: 10vh;
   }
-  to {
-    transform: rotate(360deg);
+
+  .title {
+    font-size: 20px;
+    padding-bottom: 15px;
+    letter-spacing: 15px;
+
+  }
+
+  .content {
+    width: 55%;
+    margin-top: 50px !important;
+  }
+
+  .SelectTip {
+    margin: 35px 25px;
+  }
+
+
+}
+
+@media (max-width:1300px) AND (min-width:1000px) {
+  .content {
+    width: 75%;
+    margin-top: 25px;
+  }
+  
+}
+
+@media (max-width:1000px) {
+  .bille {
+    margin-top: 5vh;
+  }
+
+  .content {
+    display: block;
+    padding-top: 25px;
+    margin-top: 25px;
+
+  }
+
+  .Tips {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .Amont {
+    font-size: 28px;
+  }
+
+  .Result {
+    padding: 25px;
+  }
+  .divBtn {
+    margin-top: 5%;
   }
 }
