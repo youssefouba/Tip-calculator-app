@@ -1,9 +1,9 @@
 import React from 'react'
 
-const Tipbutton = ({tipVal}) => {
+const Tipbutton = ({tipid,tipVal,makeTip,tipStat}) => {
   return (
     <div>
-        <button className="tip">{tipVal}</button>
+        <button className={(tipStat?"tip Lastclick":"tip")} onClick={()=>{makeTip(tipid)}}>{tipVal}%</button>
     </div>
   )
 }

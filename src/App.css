@@ -114,7 +114,8 @@ body {
 }
 
 .tip:hover {
-  background-color: hsl(186, 14%, 43%);
+  background-color:#9FE8DF;
+  color: hsl(183, 100%, 15%);
 }
 
 .custom {
@@ -128,10 +129,10 @@ body {
 }
 
 .custip {
-  padding: 10px 20px;
+  padding: 10px 15px;
   font-size: 20px;
   background-color: #F3F8FB;
-  color: hsl(184, 14%, 56%);
+  color: hsl(183, 100%, 15%);
   outline: none;
   text-align: right;
 }
@@ -142,13 +143,14 @@ body {
 
 .custip::placeholder {
   text-align: center;
+  font-size: 20px;
 }
 
 .disNo {
   display: none;
 }
 
-.NotValid {
+.NotValid,.NotValid:focus {
   border: #B57F6F solid 2px;
   padding: 3px 18px;
 }
@@ -241,6 +243,9 @@ body {
     width: 75%;
     margin-top: 25px;
   }
+  .bille {
+    margin-top: 10vh;
+  }
   
 }
 
@@ -270,4 +275,15 @@ body {
   .divBtn {
     margin-top: 5%;
   }
+}
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
 }

@@ -5,9 +5,9 @@ const AmountInfo = ({Total,Title,Unite}) => {
     <div className="Amount">
         <div className="amontTitle">
         <p className="AmontName">{Title}</p>
-        <sapn className="units">/ {Unite}</sapn>
+        <span className="units">/ {Unite}</span>
         </div>
-        <sapn className="Amont">${Total}</sapn>
+        <span className="Amont">${Total}</span>
     </div>
   )
 }
